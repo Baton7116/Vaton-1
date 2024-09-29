@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Керемет Coconut Сайты</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(180deg, #e3f2fd, #bbdefb); /* Керемет фон */
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            color: #1d2129;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-weight: bold;
+            color: #1976d2; /* Facebook логотипінің түсі */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        h1:hover {
+            transform: scale(1.1) rotate(2deg);
+            animation: shake 0.5s infinite alternate; /* Шарақтау анимациясы */
+        }
+
+        @keyframes shake {
+            from { transform: translate(0); }
+            to { transform: translate(-5px); }
+        }
+
+        .fact {
+            font-size: 28px;
+            margin: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #1d2129; /* Контур */
+            opacity: 0.9; /* Жартылай көрінетін фон */
+        }
+
+        .fact:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background-color: #fff; /* Hover кезде фон */
+        }
+
+        button {
+            padding: 15px 40px;
+            margin: 20px;
+            font-size: 26px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            font-weight: bold;
+            border: 2px solid transparent; /* Контур */
+        }
+
+        button:hover {
+            background-color: #0d47a1; /* Hover кезінде фон */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid #fff; /* Hover кезінде контур */
+        }
+
+        button:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        button:hover:after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 32px;
+            color: #1d2129;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s;
+            opacity: 0; /* Бастапқыда жасыру */
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #555;
+            opacity: 0.7;
+        }
+
+        /* Мобильді құрылғыларға арналған */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px; /* Шрифт өлшемі */
+            }
+            .fact {
+                font-size: 20px; /* Фактілердің шрифт өлшемі */
+            }
+            button {
+                font-size: 20px; /* Батырма шрифт өлшемі */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Керемет Coconut Сайты</h1>
+    </header>
+
+    <div class="fact">🥥 "Coconut – тропикалық жеміс, ол 75%-ға дейін судан тұрады."</div>
+    <div class="fact">🌴 "Coconut пальмалары 30 метрге дейін өседі және 60 жылға дейін жеміс береді."</div>
+    <div class="fact">🍹 "Coconut сусыны әлемдегі ең танымал экзотикалық подвал барма."</div>
+    <div class="fact">🌊 "Coconut шелпектері көбінесе экзотикалық үйдің үстіне қара."</div>
+    <div class="fact">🎉 "Coconut – кокос жаңғағының дәмі әлемнің әр терезеге қара"</div>
+
+    <button onclick="showResult('youtube')">бас</button>
+    <button onclick="showResult('meme')">бас</button>
+    <div id="result"></div>
+
+    <footer>
+        <p>© 2024 Сайт авторы: Батон</p>
+    </footer>
+
+    <script>
+        function showResult(type) {
+            const resultElement = document.getElementById('result');
+            if (type === 'youtube') {
+                window.location.href = "https://www.youtube.com/watch?v=jNQXAC9IVRw"; // YouTube-тың алғашқы видеосы
+            } else if (type === 'meme') {
+                window.location.href = "https://www.youtube.com/watch?v=9bZkp7q19f0"; // Мем видео сілтемесі (мысалы)
+            }
+        }
+    </script>
+</body>
+</html>
